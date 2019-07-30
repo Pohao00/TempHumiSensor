@@ -5,11 +5,9 @@
 #include <LiquidCrystal.h>
 #include <DHT11.h>
 
-    // 宣告溫濕度檢測器程式物件
+// 宣告溫濕度檢測器程式物件
 const byte dataPin = 2;
-
 DHT11 dht11(dataPin); 
-
 LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // 設定 LCD I2C 位址
 
 void setup() {
@@ -27,11 +25,9 @@ void setup() {
   lcd.print("Temp");
   lcd.setCursor(0, 1);
   lcd.print("Humidity");
-  
 }
 
 void loop() {
-  
   int err;
   float temp, humi;
   if((err=dht11.read(humi, temp))==0)
@@ -46,8 +42,6 @@ void loop() {
     Serial.println(temp);
     Serial.println(humi);
   }
-
-
   /*
   int chk = DHT11.read(dataPin);
   if (chk == 0) {
