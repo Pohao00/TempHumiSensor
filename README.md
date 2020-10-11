@@ -2,8 +2,8 @@
 
 TemperatureHumiditySensor 
 
-Use Arduino to detect temperature and humidity. Transport the data to MySOL database with PHP.
-Finally, display the variety with Highcharts HTML.
+Use Arduino to detect temperature and humidity. Transport the data to MySQL database with PHP.
+Finally, display the variety with High-Charts HTML.
 
 ## Installation
 
